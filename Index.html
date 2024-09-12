@@ -4,107 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Company Portfolio - Home</title>
+    <title>HTML Tables and Forms</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS if needed -->
 </head>
 <body>
-    <!-- Header Section with Navigation Menu -->
-    <header>
-        <div>
-            <h1>Welcome to <strong>Our Company</strong></h1>
-            <nav>
-                <ul>
-                    <li><a href="Index.html">Home</a></li>
-                    <li><a href="pageTwo.html">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Main Section -->
-    <main>
-        <!-- Hero Section -->
-        <section id="hero">
-            <div>
-                <h2>Your Success is Our Priority</h2>
-                <p><em>We provide exceptional services in web development, consulting, and project management.</em></p>
-                <!-- Placeholder for Image -->
-                <img src="/public/portfolio.jpg" alt="Company's Projects">
-            </div>
-        </section>
+    <!-- Table Section -->
+    <section id="table-section">
+        <h2>Employee Information Table</h2>
+        <table border="1">
+            <caption>Employee Data</caption> <!-- Table Caption -->
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>101</td>
+                    <td>John Doe</td>
+                    <td>Development</td>
+                    <td>john.doe@company.com</td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>Jane Smith</td>
+                    <td>Marketing</td>
+                    <td>jane.smith@company.com</td>
+                </tr>
+                <tr>
+                    <td>103</td>
+                    <td>David Brown</td>
+                    <td>HR</td>
+                    <td>david.brown@company.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
-        <section id="why-us">
-            <div>
-                <h2>Why Choose <strong>Us</strong></h2>
-                <p><strong>We provide the best practices</strong> across the country, ensuring success for your business.</p>
-                <!-- Placeholder for Image -->
-                <img src="/public/values.jpg" alt="Company's employees together">
-            </div>
-        </section>
+    <!-- Form Section -->
+    <section id="form-section">
+        <h2>Registration Form</h2>
+        <form action="submit.php" method="POST">
 
-        <!-- Services Section -->
-        <section id="services">
-            <div>
-                <h2>Our <strong>Services</strong></h2>
-                <ul>
-                    <li><em>Web Development</em></li>
-                    <li>Mobile App Development</li>
-                    <li><em>Consulting Services</em></li>
-                    <li>Project Management</li>
-                </ul>
-            </div>
-        </section>
+            <!-- Text Input -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <!-- Type "text" for entering regular text like a name or username -->
 
-        <!-- Portfolio Section -->
-        <section id="portfolio">
-            <div>
-                <h2>Our <strong>Portfolio</strong></h2>
-                <p><em>Check out some of our latest projects:</em></p>
-                <!-- Placeholder for Video -->
-                <video width="320" height="240" controls>
-                    <source src="/public/coding.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <br><br>
 
-                <!-- List of projects -->
-                <ul>
-                    <li><strong>Project A</strong> - Web Development</li>
-                    <li><strong>Project B</strong> - Mobile App</li>
-                    <li><strong>Project C</strong> - Consultancy</li>
-                </ul>
-            </div>
-        </section>
+            <!-- Password Input -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <!-- Type "password" for hiding characters entered by the user -->
 
-        <!-- Contact Form Section -->
-        <section id="contact">
-            <div>
-                <h2>Contact <strong>Us</strong></h2>
-                <form action="submit.php" method="post">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required><br><br>
+            <br><br>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required><br><br>
+            <!-- Email Input -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <!-- Type "email" for email address input -->
 
-                    <label for="message">Message:</label><br>
-                    <textarea id="message" name="message" rows="4" cols="40" required></textarea><br><br>
+            <br><br>
 
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
-        </section>
-    </main>
+            <!-- Number Input -->
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="18" max="100">
+            <!-- Type "number" for numeric input -->
 
-    <!-- Footer Section -->
-    <footer>
-        <div>
-            <p>&copy; 2024 <strong>Your Company</strong>. All rights reserved.</p>
-        </div>
-    </footer>
+            <br><br>
 
-    <!-- Comments -->
-    <!-- This is a comment. You can add your custom notes here. -->
+            <!-- Date Input -->
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+            <!-- Type "date" for selecting dates -->
+
+            <br><br>
+
+            <!-- Time Input -->
+            <label for="appointment">Appointment Time:</label>
+            <input type="time" id="appointment" name="appointment">
+            <!-- Type "time" for selecting time -->
+
+            <br><br>
+
+            <!-- URL Input -->
+            <label for="website">Website:</label>
+            <input type="url" id="website" name="website">
+            <!-- Type "url" for website addresses -->
+
+            <br><br>
+
+            <!-- Range Input -->
+            <label for="satisfaction">Satisfaction Level (0-10):</label>
+            <input type="range" id="satisfaction" name="satisfaction" min="0" max="10">
+            <!-- Type "range" for sliders -->
+
+            <br><br>
+
+            <!-- Color Input -->
+            <label for="favcolor">Favorite Color:</label>
+            <input type="color" id="favcolor" name="favcolor">
+            <!-- Type "color" for color picker -->
+
+            <br><br>
+
+            <!-- File Input -->
+            <label for="resume">Upload Resume:</label>
+            <input type="file" id="resume" name="resume">
+            <!-- Type "file" for uploading files -->
+
+            <br><br>
+
+            <!-- Radio Buttons -->
+            <fieldset>
+                <legend>Gender:</legend>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </fieldset>
+            <!-- Type "radio" for multiple choice, only one selection possible -->
+
+            <br><br>
+
+            <!-- Checkbox Input -->
+            <fieldset>
+                <legend>Select Interests:</legend>
+                <input type="checkbox" id="coding" name="interest" value="coding">
+                <label for="coding">Coding</label><br>
+
+                <input type="checkbox" id="sports" name="interest" value="sports">
+                <label for="sports">Sports</label><br>
+
+                <input type="checkbox" id="reading" name="interest" value="reading">
+                <label for="reading">Reading</label>
+            </fieldset>
+            <!-- Type "checkbox" for selecting multiple options -->
+
+            <br><br>
+
+            <!-- Textarea Input -->
+            <label for="comments">Comments:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+            <!-- Type "textarea" for longer text input -->
+
+            <br><br>
+
+            <!-- Hidden Input -->
+            <input type="hidden" id="userid" name="userid" value="12345">
+            <!-- Type "hidden" for invisible input fields, often used for pre-filled data -->
+
+            <br><br>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+            <!-- Type "submit" to send the form data -->
+
+            <!-- Reset Button -->
+            <input type="reset" value="Reset">
+            <!-- Type "reset" to clear the form -->
+            
+        </form>
+    </section>
+
 </body>
 </html>
